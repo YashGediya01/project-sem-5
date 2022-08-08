@@ -1,75 +1,21 @@
+$(document).ready(function (){
+    //---------- init Isotope ---------------
+    var $grid = $('.grid').isotope({
+    });
+    $('.filter-button-group').on('click', 'li', function () {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+
+        $('.filter-button-group>li').removeClass('active');
+        $(this).addClass('active');
+
+    });
+    $("a.grouped_elements").fancybox();
+});
+
 $(document).ready(function () {
 
-    // loader
-    // var loader = $('body');
-    // loader.addClass('notLoaded');
-    // setTimeout(function () {
-    //     loader.removeClass('notLoaded');
-    // }, 500);;
-
-    // setInterval(function () {
-    //     $("#loader").fadeOut();
-    // }, 500)
-
-    // login-form-validation
-
-    // Bottom to top scroll
-    $('.main-sroll-top').bind("click", function () {
-        $('html, body').animate({ scrollTop: 0 }, 1200);
-        return false;
-    });
-    $('.main-sroll-top').hide();
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.main-sroll-top').fadeIn();
-        } else {
-            $('.main-sroll-top').fadeOut();
-        }
-    });
-
-    // form validation
-    $('#form').submit(function () {
-        var username = $('#username').val();
-        var password = $('#password').val();
-        var pass_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-
-        if (username == "") {
-            alert("Please Enter Usename..!");
-            return false;
-        }
-        if (password == "") {
-            alert("Enter Your password...!");
-            return false;
-        }
-        if (pass_regex.test(password) == false) {
-            alert("Plz Enter Valid Password..!");
-            return false;
-        }
-        if ($('input[type=checkbox]:checked').length == 0) {
-            alert("ERROR! Please select at least one checkbox");
-            valid = false;
-            return false;
-        }
-
-
-    })
-
-    // Fixed top header
-    $(window).scroll(function () {
-
-        var sticky = $('.sticky'),
-            scroll = $(window).scrollTop();
-
-        if (scroll >= 170) {
-            sticky.addClass('fixed');
-        }
-        else {
-            sticky.removeClass('fixed');
-        }
-
-    });
-
-    // Index-banner
+    //--------------- Index-banner---------------
     $('#main_banner').owlCarousel({
         loop: true,
         margin: 10,
@@ -103,19 +49,13 @@ $(document).ready(function () {
         new WOW().init();
     });
 
-    // Experience-banner
+    //--------------- Experience-banner---------------
     $('#main-experience').owlCarousel({
         loop: true,
         margin: 10,
         nav: true,
         dots: false,
         navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
-        //center:true,
-        //mouseDrag:false,
-        // stagePadding: 50,
-        //merge:true,
-        //startPosition: 2,
-        // autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
         animateIn: 'animate__fadeIn',
@@ -133,9 +73,76 @@ $(document).ready(function () {
         }
     });
 
-    // counter
+    // loader
+    // var loader = $('body');
+    // loader.addClass('notLoaded');
+    // setTimeout(function () {
+    //     loader.removeClass('notLoaded');
+    // }, 500);;
+
+    // setInterval(function () {
+    //     $("#loader").fadeOut();
+    // }, 500)
+
+    //----------- Bottom to top scroll -------------
+    $('.main-sroll-top').bind("click", function () {
+        $('html, body').animate({ scrollTop: 0 }, 1200);
+        return false;
+    });
+    $('.main-sroll-top').hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.main-sroll-top').fadeIn();
+        } else {
+            $('.main-sroll-top').fadeOut();
+        }
+    });
+
+    //--------------- form validation---------------
+    $('#form').submit(function () {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var pass_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+        if (username == "") {
+            alert("Please Enter Usename..!");
+            return false;
+        }
+        if (password == "") {
+            alert("Enter Your password...!");
+            return false;
+        }
+        if (pass_regex.test(password) == false) {
+            alert("Plz Enter Valid Password..!");
+            return false;
+        }
+        if ($('input[type=checkbox]:checked').length == 0) {
+            alert("ERROR! Please select at least one checkbox");
+            valid = false;
+            return false;
+        }
+
+
+    })
+
+    //--------------- Fixed top header---------------
+    $(window).scroll(function () {
+
+        var sticky = $('.sticky'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 170) {
+            sticky.addClass('fixed');
+        }
+        else {
+            sticky.removeClass('fixed');
+        }
+
+    });
+
+    //--------------- counter---------------
     $('.count').each(function () {
-        $(this).prop('Counter',0).animate({
+        $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
         }, {
             duration: 4000,
@@ -145,6 +152,7 @@ $(document).ready(function () {
             }
         });
     });
+
 });
 
 
@@ -162,6 +170,3 @@ $(document).ready(function () {
 //     password.setAttribute('type', type);
 //     this.classList.toggle('fa-eye');
 // });
-
-
-
