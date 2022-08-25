@@ -6734,19 +6734,3 @@
     }
   }
   
-  .opacity-0 {
-    opacity: 0;
-  }
-  
-  .culture-section-part {
-    width: 50%;
-    float: left;
-  }
-  .culture-section-part .culture-section-main {
-    width: 85%;
-    float: left;
-  }
-  .culture-section-part:nth-child(2) .culture-section-main, .culture-section-part:nth-child(4) .culture-section-main {
-    float: right;
-  }
-  

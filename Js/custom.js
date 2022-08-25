@@ -1,4 +1,29 @@
-$(document).ready(function (){
+$(document).ready(function () {
+
+    // loader
+    var loader = $('body');
+    loader.addClass('notLoaded');
+    setTimeout(function () {
+        loader.removeClass('notLoaded');
+    }, 1000);;
+
+    setInterval(function () {
+        $("#loader").fadeOut();
+    }, 1000)
+
+    //--------------- counter---------------
+    $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
     //---------- init Isotope ---------------
     var $grid = $('.grid').isotope({
     });
@@ -11,6 +36,28 @@ $(document).ready(function (){
 
     });
     $("a.grouped_elements").fancybox();
+
+    // toggle eye password
+    $('#togglePassword').click(function () {
+
+        if ($(this).hasClass('fa-eye-slash')) {
+
+            $(this).removeClass('fa-eye-slash');
+
+            $(this).addClass('fa-eye');
+
+            $('#password').attr('type', 'text');
+
+        } else {
+            $(this).removeClass('fa-eye');
+
+            $(this).addClass('fa-eye-slash');
+
+            $('#password').attr('type', 'password');
+
+        }
+    });
+
 });
 
 $(document).ready(function () {
@@ -74,32 +121,21 @@ $(document).ready(function () {
     });
 
     $('#testimonials').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 10,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 1
             },
-            1000:{
-                items:1
+            1000: {
+                items: 1
             }
         }
     })
-
-    // loader
-    // var loader = $('body');
-    // loader.addClass('notLoaded');
-    // setTimeout(function () {
-    //     loader.removeClass('notLoaded');
-    // }, 500);;
-
-    // setInterval(function () {
-    //     $("#loader").fadeOut();
-    // }, 500)
 
     //----------- Bottom to top scroll -------------
     $('.main-sroll-top').bind("click", function () {
@@ -157,33 +193,28 @@ $(document).ready(function () {
 
     });
 
-    //--------------- counter---------------
-    $('.count').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-
 });
 
 
 // show password eye button
-// const togglePassword = document
-//     .querySelector('#togglePassword');
+const togglePassword = document
+    .querySelector('#togglePassword');
 
-// const password = document.querySelector('#password');
+const password = document.querySelector('#password');
 
-// togglePassword.addEventListener('click', () => {
-//     const type = password
-//         .getAttribute('type') === 'password' ?
-//         'text' : 'password';
+togglePassword.addEventListener('click', () => {
+    const type = password
+        .getAttribute('type') === 'password' ?
+        'text' : 'password';
 
-//     password.setAttribute('type', type);
-//     this.classList.toggle('fa-eye');
-// });
+    password.setAttribute('type', type);
+});
+
+// login admin
+function login() {
+    if ($("#username").val() == "admin" && $("#password").val() == "password") {
+        window.location="./Pages/dashboard.html";
+    } else {
+        window.location="./Pages/index.html";
+    }
+};

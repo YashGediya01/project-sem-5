@@ -36,14 +36,18 @@
     <!-- animate__animated animate__zoomIn animate__delay-1s -->
     <!-- loader -->
 
-    <div class="login_main">
+    <div class="signUp_main">
         <form action="" id="form">
             <div class="overlay"></div>
             <div class="login-bg">
-                <h3>Login To Your Account</h3>
+                <h3>SIGN UP</h3>
                 <div class="email-sec">
                     <label for=""><i class="fa-solid fa-user label-icon"></i>Username</label>
                     <input type="text" name="" id="username" placeholder="Enter Your Username">
+                </div>
+                <div class="email-sec">
+                    <label for=""><i class="fa-solid fa-at label-icon"></i>Email</label>
+                    <input type="email" name="" id="username" placeholder="Enter Your Username">
                 </div>
                 <div class="email-sec">
                     <label for=""><i class="fa-solid fa-lock label-icon"></i>Password</label>
@@ -57,13 +61,12 @@
                     </label>
                 </div>
                 <div class="login-btn-main">
-                    <a
-                    onclick="login()"
-                        class="login-btn d-flex align-items-center justify-content-center position-relative">Login</a>
+                    <a href="./Pages/index.html"
+                        class="login-btn d-flex align-items-center justify-content-center position-relative">Sign Up</a>
                 </div>
                 <div class="already-account">
-                    Not Registered?
-                    <a href="signup.html">Create Acccount Now</a>
+                    Already a member?
+                    <a href="login.html">Log In</a>
                 </div>
             </div>
         </form>
