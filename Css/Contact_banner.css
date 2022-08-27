@@ -416,8 +416,8 @@
     width: 0;
     height: 0;
     transform-style: preserve-3d;
-    perspective: 90px;
-    animation: rotate 14s infinite linear;
+    perspective: 63px;
+    animation: rotate 18s infinite linear;
   }
   
   @keyframes rotate {

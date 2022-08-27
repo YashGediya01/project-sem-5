@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="/Css/owl.carousel.min.css">
     <link rel="stylesheet" href="/Css/owl.theme.default.min.css">
 
+    <!-- datePicker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+
     <!-- Style -->
     <link rel="stylesheet" href="../Css/style.css">
 
@@ -49,6 +52,9 @@
 
     <!-- owl carousel -->
     <script src="/Js/owl.carousel.min.js"></script>
+
+    <!-- datePicker -->
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
     <script src="../Js/custom.js"></script>
 
@@ -73,22 +79,20 @@
                 <div class="container-fluid bgtop animate__animated animate__fadeInDown animate__delay-1s">
                     <div class="d-flex align-items-center justify-content-between ">
                         <div class="logo_img">
-                            <img src="../Images/logo.png" alt="">
+                            <img src="../Images/Travelex.png" alt="">
                         </div>
                         <ul class="start-menu">
-                            <li><a href="/Pages/index.html">Home</a></li>
+                            <li><a href="#">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="#">Tours<i class="fa-solid fa-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">Tour 1</a></li>
-                                    <li><a href="#">Tour 2</a></li>
-                                    <li><a href="#">Tour 3</a></li>
-                                    <li><a href="#">Tour Details</a></li>
+                                    <li><a href="tourDetails.html">Tour Details</a></li>
                                 </ul>
                             </li>
                             <li><a href="destination.html">Destination</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="contact.html">Contact</a></li>
+                            <li><a href="../login.html" class="login-btn-index">REGISTER</a></li>
                         </ul>
                         <div class="toggle-menu">
                             <a href="#"><i class="fa-solid fa-bars"></i></a>
@@ -119,78 +123,78 @@
             </div>
             <table class="table">
                 <thead>
-                  <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Place</th>
-                    <th scope="col">Person</th>
-                    <th scope="col">Adult</th>
-                    <th scope="col">Child</th>
-                    <th scope="col">MaxDays</th>
-                    <th scope="col">Rating</th>
-                    <th scope="col">Price</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Place</th>
+                        <th scope="col">Person</th>
+                        <th scope="col">Adult</th>
+                        <th scope="col">Child</th>
+                        <th scope="col">MaxDays</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Price</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Rome</td>
-                    <td>10+</td>
-                    <td>7+</td>
-                    <td>3+</td>
-                    <td>10</td>
-                    <td>9.3</td>
-                    <td>$1500/-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Maldives</td>
-                    <td>12+</td>
-                    <td>7+</td>
-                    <td>5+</td>
-                    <td>10</td>
-                    <td>9.8</td>
-                    <td>$2500/-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Zakynthos</td>
-                    <td>10+</td>
-                    <td>6+</td>
-                    <td>4+</td>
-                    <td>10</td>
-                    <td>9.5</td>
-                    <td>$3000/-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>France</td>
-                    <td>10+</td>
-                    <td>7+</td>
-                    <td>3+</td>
-                    <td>10</td>
-                    <td>9.1</td>
-                    <td>$2500/-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Canada</td>
-                    <td>9+</td>
-                    <td>6+</td>
-                    <td>3+</td>
-                    <td>10</td>
-                    <td>9.3</td>
-                    <td>$1500/-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Italy</td>
-                    <td>6+</td>
-                    <td>4+</td>
-                    <td>2+</td>
-                    <td>10</td>
-                    <td>8.5</td>
-                    <td>$1300/-</td>
-                  </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Rome</td>
+                        <td>10+</td>
+                        <td>7+</td>
+                        <td>3+</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        <td>$1500/-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Maldives</td>
+                        <td>12+</td>
+                        <td>7+</td>
+                        <td>5+</td>
+                        <td>10</td>
+                        <td>9.8</td>
+                        <td>$2500/-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Zakynthos</td>
+                        <td>10+</td>
+                        <td>6+</td>
+                        <td>4+</td>
+                        <td>10</td>
+                        <td>9.5</td>
+                        <td>$3000/-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>France</td>
+                        <td>10+</td>
+                        <td>7+</td>
+                        <td>3+</td>
+                        <td>10</td>
+                        <td>9.1</td>
+                        <td>$2500/-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Canada</td>
+                        <td>9+</td>
+                        <td>6+</td>
+                        <td>3+</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        <td>$1500/-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Italy</td>
+                        <td>6+</td>
+                        <td>4+</td>
+                        <td>2+</td>
+                        <td>10</td>
+                        <td>8.5</td>
+                        <td>$1300/-</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -210,7 +214,69 @@
                             <div class="input-field space-input">
                                 <input type="text" placeholder="Full Name">
                             </div>
+                            <div class="input-field space-input">
+                                <input type="email" placeholder="Email Address">
+                            </div>
+                            <div class="input-group flex-nowrap space-input">
+                                <span class="input-group-text" id="addon-wrapping">+91</span>
+                                <input type="number" class="form-control" placeholder="Mobile Number"
+                                    aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                            <div class="input-field space-input">
+                                <input type="number" min="1" max="5" maxlength="5" placeholder="Total People" id="hello">
+                            </div>
+                            <div class="input-group input-group-select space-input">
+                                <label class="input-group-text" for="inputGroupSelect02">Place</label>
+                                <select class="form-select" id="inputGroupSelect02">
+                                    <option value="1" data-image="#opt-1" disabled selected>Choose Your destinations</option>
+                                    <option value="2" data-image="#opt-2">Rome</option>
+                                    <option value="3" data-image="#opt-3">Maldives</option>
+                                    <option value="4" data-image="#opt-4">Zakynthos</option>
+                                    <option value="5" data-image="#opt-5">France</option>
+                                    <option value="6" data-image="#opt-6">Canada</option>
+                                    <option value="7" data-image="#opt-7">Italy</option>
+                                </select>
+                                <label class="input-group-text" id="selectPriceLabel" for="inputGroupSelect02">Price</label>
+                            </div>
+                            <div class="main-date-picker">
+                                <div class="input-date">
+                                    <input type="text" id="datepicker" autocomplete="off" placeholder="From Date">
+                                </div>
+                                <div class="input-date">
+                                    <input type="text" id="todatepicker" autocomplete="off" placeholder="To Date">
+                                </div>
+                            </div>
+                            <div class="input-field space-input">
+                                <textarea name="textarea" id="textarea" placeholder="Your Inquiry"></textarea>
+                            </div>
+                            <div class="book-btn space-input">
+                                <a href="#" class="d-flex align-items-center"><i
+                                        class="fa-solid fa-arrow-up-long"></i>Book Now</a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 img-sec">
+                    <div class="img-1 active" id="opt-1">
+                        <img src="/Images/TourSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-2">
+                        <img src="/Images/RomeSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-3">
+                        <img src="/Images/maldivesSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-4">
+                        <img src="/Images/ZakynthosSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-5">
+                        <img src="/Images/FranceSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-6">
+                        <img src="/Images/CanadaSelect.png" alt="">
+                    </div>
+                    <div class="img-1" id="opt-7">
+                        <img src="/Images/ItalySelect.png" alt="">
                     </div>
                 </div>
             </div>
@@ -237,7 +303,7 @@
                     </div>
                     <!-- Booking From -->
                     <div class="col-md-5 offset-md-2">
-                        <div class="testimonials-box">
+                        <div class="testimonials-box rounded-3">
                             <div class="head-box">
                                 <h6>Testimonials</h6>
                                 <h4>Travelers Reviews</h4>
@@ -250,10 +316,10 @@
                                     <div class="info">
                                         <div class="author-img"> <img src="/Images/auth1.png" alt=""> </div>
                                         <div class="cont">
-                                            <div class="rating"> 
+                                            <div class="rating">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i> 
+                                                <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
@@ -268,9 +334,12 @@
                                     <div class="info">
                                         <div class="author-img"> <img src="/Images/auth2.png" alt=""> </div>
                                         <div class="cont">
-                                            <div class="rating"> <i class="star active"></i> <i class="star active"></i>
-                                                <i class="star active"></i> <i class="star active"></i> <i
-                                                    class="star active"></i>
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
                                             </div>
                                             <h6>Olivia Martin</h6> <span>Guest review</span>
                                         </div>
@@ -283,9 +352,12 @@
                                     <div class="info">
                                         <div class="author-img"> <img src="/Images/auth3.png" alt=""> </div>
                                         <div class="cont">
-                                            <div class="rating"> <i class="star active"></i> <i class="star active"></i>
-                                                <i class="star active"></i> <i class="star active"></i> <i
-                                                    class="star active"></i>
+                                            <div class="rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
                                             </div>
                                             <h6>Nolan White</h6> <span>Guest review</span>
                                         </div>
@@ -314,7 +386,7 @@
                                 <div class="footer-contact-links-wrapper">
                                     <div class="footer-contact-link-wrapper">
                                         <div class="image-wrapper footer-contact-link-icon">
-                                            <div class="icon-footer"> <i class="fa-solid fa-phone"></i> </div>
+                                            <div class="icon-footer rounded-2"> <i class="fa-solid fa-phone"></i> </div>
                                         </div>
                                         <div class="footer-contact-link-content">
                                             <h6>Call us</h6>
@@ -324,7 +396,7 @@
                                     <div class="footer-contact-links-divider"></div>
                                     <div class="footer-contact-link-wrapper">
                                         <div class="image-wrapper footer-contact-link-icon">
-                                            <div class="icon-footer"><i class="fa-solid fa-envelope"></i> </div>
+                                            <div class="icon-footer rounded-2"><i class="fa-solid fa-envelope"></i> </div>
                                         </div>
                                         <div class="footer-contact-link-content">
                                             <h6>Write to us</h6>
@@ -334,7 +406,7 @@
                                     <div class="footer-contact-links-divider"></div>
                                     <div class="footer-contact-link-wrapper">
                                         <div class="image-wrapper footer-contact-link-icon">
-                                            <div class="icon-footer"> <i class="fa-solid fa-location-arrow"></i></div>
+                                            <div class="icon-footer rounded-2"> <i class="fa-solid fa-location-arrow"></i></div>
                                         </div>
                                         <div class="footer-contact-link-content">
                                             <h6>Address</h6>
@@ -352,11 +424,11 @@
                         <!-- about & social icons -->
                         <div class="col-md-4 widget-area">
                             <div class="widget clearfix">
-                                <div class="footer-logo"> <img class="img-fluid" src="/Images/logo.png" alt=""> </div>
+                                <div class="footer-logo"> <img class="img-fluid" src="/Images/Travelex.png" alt="">
+                                </div>
                                 <div class="widget-text">
-                                    <p>Quisque imperdiet sapien porttito the bibendum sellentesque the commodo erat acar
-                                        accumsa lobortis, enim diam the nesuen.</p>
-                                    <div class="social-icons">
+                                    <p>Everyone was wise enough to carry the drink and sell it.</p>
+                                    <div class="social-icons mt-3">
                                         <ul class="list-inline">
                                             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                                             <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
@@ -373,6 +445,7 @@
                                 <h3 class="widget-title">Quick Links</h3>
                                 <ul>
                                     <li><a href="about.html">About</a></li>
+                                    <li><a href="tourDetails.html">Tour Details</a></li>
                                     <li><a href="destination.html">Destinations</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="Contact.html">Contact</a></li>
@@ -384,10 +457,10 @@
                             <div class="widget clearfix">
                                 <h3 class="widget-title">Subscribe</h3>
                                 <p>Sign up for our monthly blogletter to stay informed about travel and tours</p>
-                                <div class="widget-newsletter">
+                                <div class="widget-newsletter mt-3">
                                     <form action="#">
-                                        <input type="email" placeholder="Email Address" required="">
-                                        <button type="submit">Send</button>
+                                        <input type="email" class="rounded-2" placeholder="Email Address" required="">
+                                        <button type="submit" class="rounded-2">Send</button>
                                     </form>
                                 </div>
                             </div>
@@ -398,7 +471,7 @@
                 <div class="bottom-footer-text">
                     <div class="row copyright">
                         <div class="col-md-12">
-                            <p class="mb-0">©2022 <a href="#">DuruThemes</a>. All rights reserved.</p>
+                            <p class="mb-0">©2022 <a href="#">Travelex</a>. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
